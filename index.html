@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peer Leadership Experience - Digital Portfolio</title>
+  <style>
+    /* ====== GLOBAL STYLES ====== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: .5rem;
+    }
+
+    /* ====== MAIN CONTENT ====== */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .experience-section {
+      margin-top: 2rem;
+    }
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* ====== EXPERIENCE CARD ====== */
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      color: #4e73df;
+      margin-bottom: .5rem;
+    }
+    .card span {
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .card p {
+      margin-top: 0.7rem;
+      font-size: 0.95rem;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f1f1f1;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    /* ====== BUTTON SCROLL ====== */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #4e73df;
+      color: white;
+      border: none;
+      padding: 0.8rem 1rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+      transition: background 0.3s;
+    }
+    #scrollTopBtn:hover {
+      background: #2e59d9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header>
+    <h1>Peer Leadership Experience</h1>
+    <p>Guiding peers, fostering collaboration, and driving positive change.</p>
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="container">
+    <section class="experience-section">
+      <h2>My Leadership Roles</h2>
+      <div class="experience-grid">
+        <!-- Card 1 -->
+        <div class="card">
+          <h3>Team Mentor</h3>
+          <span>2023 - Present</span>
+          <p>Mentored a group of junior students in project-based learning, helping them
+          develop coding, problem-solving, and collaboration skills.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <h3>Peer Tutor</h3>
+          <span>2022 - 2023</span>
+          <p>Provided academic guidance in computer science subjects, creating simplified 
+          study materials and organizing peer-to-peer doubt sessions.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <h3>Event Coordinator</h3>
+          <span>2021 - 2022</span>
+          <p>Organized and led student workshops and coding competitions, encouraging 
+          active participation and teamwork across departments.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <h3>Class Representative</h3>
+          <span>2020 - 2021</span>
+          <p>Acted as a bridge between students and faculty, addressing concerns and 
+          promoting a healthy academic environment.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 My Digital Portfolio | Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn">↑</button>
+
+  <script>
+    // Show scroll-to-top button when scrolling
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    // Scroll back to top
+    scrollBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    };
+  </script>
+</body>
+</html>
